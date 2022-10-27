@@ -1,0 +1,16 @@
+<div>
+    <input type="text" 
+    placeholder="Search a city" 
+    [ngModel]="cityName"
+    #cityInput
+    />
+    <hr />
+    <!-- <gmap [city]="cityName"></gmap> -->
+    <h3>
+        <img [src]="weatherIconURL + data?.weather[0].icon +'.png'">
+        {{data?.weather[0].description}} / {{data?.main.temp}}°
+      </h3>
+    
+      <pre>{{data?.coord.lat}} {{data?.coord.lon}}°</pre> 
+      <pre>data:\n{{data | json}}</pre> 
+  </div>
